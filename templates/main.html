@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../static/css/mainstyle.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Classifing</title>
+</head>
+
+<body>
+    <div class="is-flex pl-3 pr-3 pt-2 pb-2 is-justify-content-space-between has-text-weight-bold"
+        style="background-color: #000">
+        <div class="is-flex m-0">
+            <div class="has-margin-block-auto">
+                <a class="container pl-6 pr-4" href="../page/index">
+                    <img src="../static/pictures/logowhite.png" width="100">
+                </a>
+            </div>
+            <div class="has-margin-block-auto">
+                <a class="container pl-3 pr-3 has-text-white" href="../page/index">
+                    Home
+                </a>
+            </div>
+            <div class="has-margin-block-auto">
+                <a class="container pl-3 pr-3 has-text-white" href="../page/aboutus">
+                    About us
+                </a>
+            </div>
+        </div>
+        <div class="is-flex m-0">
+            <div class="has-margin-block-auto">
+                <a class="container pl-3 pr-3 has-text-white" href="../page/main">
+                    <div class="button">Start Classifing</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="columns" style="height: calc(100vh - 81px);">
+        <div class="column">
+            <div class="maincontainer animate__animated animate__fadeInTopLeft">
+                <div class="bodycontainer">
+                    <div class="drag-area">
+                        <div class="icon"></div>
+                        <header>Drag & Drop to Upload File</header>
+                        <span>OR</span>
+                        <button>Browse File</button>
+                        <input type="file" hidden>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-6 pr-6 animate__animated animate__fadeInBottomLeft">
+                <div class="title mb-3 has-text-white">
+                    <span>Your chosen File</span>
+                    <span class="is-size-5 has-text-danger has-text-weight-bold">(Max 4 files)</span>
+                    <span class="is-size-5" id="reloadButton" style="cursor: pointer;"><i
+                            class="fas fa-redo"></i></span>
+                </div>
+                <div class="columns is-multiline file-list has-text-white"></div>
+            </div>
+        </div>
+        <div class="column is-1 has-margin-block-auto animate__animated animate__fadeInBottomRight">
+            <div class="is-flex classify-button-container">
+                <div class='button' id="classifyButton">
+                    <div class='blob'>
+                        <svg xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' xmlns='http://www.w3.org/2000/svg'
+                            viewBox='0 0 310 350'>
+                            <path
+                                d='M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z' />
+
+                        </svg>
+                    </div>
+                    <div class='line'></div>
+                    <div class='text'>
+                        <p>C</p>
+                        <p>l</p>
+                        <p>a</p>
+                        <p>s</p>
+                        <p>s</p>
+                        <p>i</p>
+                        <p>f</p>
+                        <p>y</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column pr-6 animate__animated animate__fadeInTopRight">
+            <div class="p-5">
+                <table class="table is-fullwidth has-text-white has-background-transparent" id="classifiedTable"
+                    style="table-layout: fixed;">
+                    <thead style="background: #000000db;">
+                        <tr>
+                            <th><abbr class="has-text-white">File Name</abbr></th>
+                            <th><abbr class="has-text-white">Music Type</abbr></th>
+                            <th><abbr class="has-text-white">Probility</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody class="has-background-transparent">
+                        <tr class="animate__animated animate__fadeIn" style="background: #000000db;">
+                            <td><i>Empty Data</i></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../static/js/mainrender.js"></script>
+<script>
+    build();
+</script>
+
+</html>

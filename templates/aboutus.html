@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../static/css/aboutus.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>About us</title>
+</head>
+
+<body>
+    <div class="is-flex pl-3 pr-3 pt-2 pb-2 is-justify-content-space-between has-text-weight-bold"
+        style="background-color: #000">
+        <div class="is-flex m-0">
+            <div class="has-margin-block-auto">
+                <a class="container pl-6 pr-4" href="../page/index">
+                    <img src="../static/pictures/logowhite.png" width="100">
+                </a>
+            </div>
+            <div class="has-margin-block-auto">
+                <a class="container pl-3 pr-3 has-text-white" href="../page/index">
+                    Home
+                </a>
+            </div>
+            <div class="has-margin-block-auto">
+                <a class="container pl-3 pr-3 has-text-white" href="../page/aboutus">
+                    About us
+                </a>
+            </div>
+        </div>
+
+        <div class="is-flex m-0">
+            <div class="has-margin-block-auto">
+                <a class="container pl-3 pr-3 has-text-white" href="../page/main">
+                    <div class="button">Start Classifing</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="is-flex is-justify-content-center">
+        <div class="title p-4 m-0 is-size-1 has-text-white animate__animated animate__fadeInDown">About us</div>
+    </div>
+
+    <div class="columns">
+        <div class="column">
+            <div class="columns">
+                <div class="column is-2 animate__animated animate__fadeInTopLeft">
+                    <div class="button-block">
+                        <div class="social"><a href="#"> <i class="fas fa-laptop"></i></a></div>
+                    </div>
+                </div>
+                <div
+                    class="column title m-0 is-size-5 p-6 has-text-grey-lighter is-flex animate__animated animate__fadeInTopLeft">
+                    <div class="has-margin-block-auto">
+                        {{value}}
+                    </div>
+                </div>
+                <div class="column is-2 animate__animated animate__fadeInTopRight">
+                    <div class="button-block">
+                        <div class="social"><a href="#"> <i class="fab fa-youtube"></i></a></div>
+                    </div>
+                </div>
+                <div
+                    class="column title m-0 is-size-5 p-6 has-text-grey-lighter animate__animated animate__fadeInTopRight">
+                    <iframe width="400" height="200" src="https://www.youtube.com/embed/PeMlggyqz0Y"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-2 animate__animated animate__fadeInBottomRight">
+                    <div class="button-block">
+                        <div class="social"><a href="#"> <i class="fab fa-facebook"></i></a></div>
+                    </div>
+                </div>
+                <div
+                    class="column title m-0 is-size-5 p-6 has-text-grey-lighter animate__animated animate__fadeInBottomRight">
+                    Learn more on:<br><br>
+                    <div id="facebookLink"></div>
+                </div>
+                <div class="column is-2 animate__animated animate__fadeInBottomLeft">
+                    <div class="button-block">
+                        <div class="social"><a href="#"> <i class="fab fa-instagram"></i></a></div>
+                    </div>
+                </div>
+                <div
+                    class="column title m-0 is-size-5 p-6 has-text-grey-lighter animate__animated animate__fadeInBottomLeft">
+                    Learn more on:<br><br>
+                    <div id="instagramLink"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    let facebookLink = [
+        {
+            "name": "Nguyễn Quốc Hoàng",
+            "link": "#",
+        },
+        {
+            "name": "Chu Nguyễn Hoàng Sơn",
+            "link": "#",
+        },
+        {
+            "name": "Nguyễn Hoàng Anh Khoa",
+            "link": "#",
+        },
+        {
+            "name": "Biện Quang Huy",
+            "link": "#",
+        },
+    ]
+
+    let instagramLink = [
+        {
+            "name": "Nguyễn Quốc Hoàng",
+            "link": "#",
+        },
+        {
+            "name": "Chu Nguyễn Hoàng Sơn",
+            "link": "#",
+        },
+        {
+            "name": "Nguyễn Hoàng Anh Khoa",
+            "link": "#",
+        },
+        {
+            "name": "Biện Quang Huy",
+            "link": "#",
+        },
+    ]
+
+    let facebookLinkContainer = document.getElementById("facebookLink");
+    for (let index in facebookLink) {
+        facebookLinkContainer.innerHTML += `
+            <p>
+                - <a class="has-text-white" href="${facebookLink[index].link}"
+                    target="_blank">${facebookLink[index].name}</a>
+            </p> 
+        `
+    };
+
+    let instagramLinkContainer = document.getElementById("instagramLink");
+    for (let index in instagramLink) {
+        instagramLinkContainer.innerHTML += `
+            <p>
+                - <a class="has-text-white" href="${instagramLink[index].link}"
+                    target="_blank">${instagramLink[index].name}</a>
+            </p> 
+        `
+    };
+</script>
+
+</html>
